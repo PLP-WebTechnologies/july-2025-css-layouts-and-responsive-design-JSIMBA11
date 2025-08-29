@@ -1,0 +1,105 @@
+/* ========== Base Styles ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Navigation - Flexbox */
+.navbar {
+  background: #444;
+}
+.nav-links {
+  display: flex;
+  justify-content: center; /* flexbox alignment */
+  list-style: none;
+}
+.nav-links li {
+  margin: 0 1rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Main Layout - Grid */
+.main-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* content + sidebar */
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Content Area */
+.content h2 {
+  margin-bottom: 1rem;
+}
+
+/* Flexbox for cards */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.card {
+  flex: 1;
+  background: #eee;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Footer */
+.site-footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ========== Responsive Design ========== */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .main-grid {
+    grid-template-columns: 1fr; /* stack content + sidebar */
+  }
+
+  .card-container {
+    flex-direction: column; /* stack cards */
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column; /* stack nav links */
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+}
